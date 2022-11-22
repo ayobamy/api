@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 from googletrans import Translator
 
-text1 = "A Római Birodalom (latinul Imperium Romanum) az ókori Róma által létrehozott államalakulat volt a Földközi-tenger medencéjében"
+text = "The token is based on a seed which is updated once per hour and on the text that will be translated. Both are combined - by some strange math - in order to generate a final token (e.g. 744915.856682) which is used by the API to validate the request."
 
-text2 = "Vysoké Tatry sú najvyššie pohorie na Slovensku a v Poľsku a sú zároveň jediným horstvom v týchto štátoch s alpským charakterom."
+translator = Translator(service_urls=[
+      'translate.google.com',
+      'translate.google.co.kr',
+    ])
 
-translator = Translator()
-
-dt1 = translator.detect(text1)
-print(dt1)
-print('----------------------------------')
-dt2 = translator.detect(text2)
-print(dt2)
+dt1 = translator.translate(text, dest='yo')
+name = dt1.text
+print(name)
+# text = translator.detect(name)
+# print(text)
