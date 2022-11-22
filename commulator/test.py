@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-from googletrans import Translator
+from gtts import gTTS
 
-translator = Translator()
-
-res = translator.translate("A Római Birodalom (latinul Imperium Romanum) az ókori Róma által létrehozott államalakulat volt a Földközi-tenger medencéjében.", dest='fr')
-print(res.text)
+text_speech = gTTS(text="Hello guys! Welcome to my blog", lang="en")
+text_speech.save('sample.mp3')
