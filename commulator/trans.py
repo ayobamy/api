@@ -9,7 +9,7 @@ translator = Translator(service_urls=[
     'translate.google.co.kr',
 ])
 
-dt1 = translator.translate(text, dest='fr')
+dt1 = translator.translate(text, dest='yo')
 name = dt1.text
 print(name)
 # text = translator.detect(name)
