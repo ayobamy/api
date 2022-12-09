@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User, Group
-from commulator.models import Profile
+from commulator.models import Profile, Post
 
 # Register your models here.
 
@@ -15,4 +15,4 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 admin.site.unregister(Group)
-# admin.site.register(Profile)
+admin.site.register(Post)

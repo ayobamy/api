@@ -17,6 +17,20 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
+class Post(models.Model):
+    user = models.ForeignKey(
+        User, related_name="posts", on_delete=models.DO_NOTHING
+    )
+    body = models.CharField(max_length=140)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return (
+            f"{self.user} "
+            f"({self.created_at:%Y-%m-%d %H:%M}): "
+            f"{self.body[:30]}..."
+        )
+
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:
@@ -25,6 +39,7 @@ def create_profile(sender, instance, created, **kwargs):
         # user_profile.follows.set([instance.profile.id])
         user_profile.follows.add(instance.profile)
         user_profile.save()
+    
 
 # # Create a Profile for each new user.
 # post_save.connect(create_profile, sender=User)
