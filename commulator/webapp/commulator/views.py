@@ -1,11 +1,21 @@
 from django.shortcuts import render
 from .models import Profile
+from .forms import PostForm
 
 # Create your views here.
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def dashboard(request):
-    return render(request, "commulator/dashboard.html")
+    form = PostForm(request.POST or None)
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
+            return redirect("commulator:dashboard")
+    form = PostForm()
+    return render(request, "commulator/dashboard.html", {"form": form})
 
 def profile_list(request):
     profiles = Profile.objects.exclude(user=request.user)
