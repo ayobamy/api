@@ -2,7 +2,17 @@
 
 {% block content %}
 
+
 <div class="column">
+    {% for post in posts %}
+    <div class="box">
+        {{post.body}}
+        <span class="is-small has-text-grey-light">
+            ({{ post.created_at }} by {{ post.user.username }}
+        </span>
+    </div>
+    {% endfor %}
+
     {% for followed in user.profile.follows.all %}
         {% for post in followed.user.posts.all %}
             <div class="box">
