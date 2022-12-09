@@ -24,6 +24,11 @@
             <a href="" class="navbar-item">
                 <img src="https://user-images.githubusercontent.com/59466195/206653664-9411d7d0-a670-4cf3-833f-331388868110.png" alt="logo-icon" style="max-height: 40px" class="py-2 px-2">
             </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
@@ -36,7 +41,16 @@
             </div>
         </div>
     </nav>
-    <section class="hero has-background-info">
+
+    <div class="section pt-4 pb-0">
+        <nav class="breadcrumb has-arrow-separator">
+            <ul class="container">
+                <li><a class="has-text-grey">Commulator</a></li>
+                <li><a class="has-text-grey">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="hero is-fullheight has-background-info">
         <div class="hero-body">
           <div class="container">
             <figure class="image center">
@@ -55,5 +69,14 @@
 
         </div>
     </div>
+
+    <script>
+        const burgerIcon = document.querySelector('#burger');
+        const navbarMenu = document.querySelector('#nav-links');
+
+        burgerIcon.addEventListener('click', () => {
+            navbarMenu.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>
