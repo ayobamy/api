@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Profile
+from .models import Profile, Post
 from .forms import PostForm
 
 # Create your views here.
@@ -14,8 +14,12 @@ def dashboard(request):
             post.user = request.user
             post.save()
             return redirect("commulator:dashboard")
-    form = PostForm()
-    return render(request, "commulator/dashboard.html", {"form": form})
+    
+    followed_posts = Post.objects.filter(
+        user__profile__in=request.user.profile.follows.all()
+    ).order_by("-created_at")
+
+    return render(request, "commulator/dashboard.html", {"form": form, "posts": followed_posts},)
 
 def profile_list(request):
     profiles = Profile.objects.exclude(user=request.user)
