@@ -7,7 +7,6 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # email = models.EmailField()
     follows = models.ManyToManyField(
         "self",
         related_name="followed_by",
