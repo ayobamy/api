@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Commulator</title>
-
+    <title>{% block title %}Commulator{% endblock %}</title>
+    {% block stylesheet %}
     <style>
             
-      .center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-                  
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+                    
     </style>
+    {% endblock %}
       
 </head>
 <body>
+    {% block body %}
     <nav class="navbar has-shadow is-white">
         <div class="navbar-brand">
             <a href="" class="navbar-item">
@@ -34,7 +36,7 @@
             <div class="navbar-end">
                 <a href="" class="navbar-item">Home</a>
                 <a href="" class="navbar-item">About</a>
-                <a href="team.html" class="navbar-item">Team</a>
+                <a class="navbar-item" href="{% url 'commulator:team' %}">Team</a>
                 <a href="" class="navbar-item">Sign up</a>
                 <a href="" class="navbar-item">Login</a>
             </div>
@@ -79,5 +81,6 @@
             navbarMenu.classList.toggle('is-active');
         });
     </script>
+    {% endblock body %}
 </body>
 </html>

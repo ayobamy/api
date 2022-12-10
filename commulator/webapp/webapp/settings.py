@@ -57,7 +57,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, "templates"],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
