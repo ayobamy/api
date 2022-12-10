@@ -41,3 +41,6 @@ def profile(request, pk):
             current_user_profile.follows.remove(profile)
         current_user_profile.save()
     return render(request, "commulator/profile.html", {"profile": profile})
+
+def team(request):
+    return render(request, "team.html")
