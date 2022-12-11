@@ -4,12 +4,6 @@
   
 <head>
   <title>{% block title %}Team{% endblock %}</title>
-  <link rel='stylesheet' href=
-'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css'>
-  
-  <script src=
-'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'>
-  </script>
 {% block stylesheet %}
   <style>
     div.columns {
@@ -27,21 +21,22 @@
 
 <body>
     {% block body %}
-    <div class='container has-text-centered'>
+
+    <div class='container'>
         <div class='columns is-mobile is-centered'>
-        <div class='column is-5'>
+        <div class='column'>
             <div class="box">
-            <article class="media">
+            <article class="media mt-4 py-2 px-4">
                 <div class="media-left">
                 <figure class="image is-128x128">
                     <img class='is-rounded'
-                    src="">
+                    src="https://user-images.githubusercontent.com/59466195/206879222-c280e8a6-b0d7-4508-bcdb-0f83ba73d956.jpg">
                 </figure>
                 </div>
                 <div class="media-content">
-                <div class="content">
+                <div class="content has-text-left mb-5">
                     <p>
-                    <strong>Bill Gates</strong> 
+                    <strong>Ahmed Olawale</strong> 
                     <br>
                     The horrifying killings of 
                     George Floyd, Ahmaud Arbery, 
@@ -54,14 +49,14 @@
                     </p>
                 </div>
                 <nav class="level is-mobile">
-                    <div class="level-left">
+                    <div class="level-left mb-4">
                     <a class="level-item">
-                        <span class="icon is-small">
+                        <span class="icon is-small mr-3">
                         <i class="fas fa-reply"></i>
                         </span>
                     </a>
                     <a class="level-item">
-                        <span class="icon is-small">
+                        <span class="icon is-small mr-3">
                         <i class="fas fa-retweet"></i>
                         </span>
                     </a>
@@ -76,6 +71,104 @@
             </article>
             </div>
         </div>
+        <div class='column'>
+            <div class="box">
+            <article class="media mt-4 py-2 px-4">
+                <div class="media-left">
+                <figure class="image is-128x128">
+                    <img class='is-rounded'
+                    src="https://user-images.githubusercontent.com/59466195/206879222-c280e8a6-b0d7-4508-bcdb-0f83ba73d956.jpg">
+                </figure>
+                </div>
+                <div class="media-content">
+                <div class="content has-text-left mb-5">
+                    <p>
+                    <strong>Ahmed Olawale</strong> 
+                    <br>
+                    The horrifying killings of 
+                    George Floyd, Ahmaud Arbery, 
+                    Breonna Taylor and far too 
+                    many other Black people—and 
+                    the protests they sparked—are
+                    shining a light on the brutal 
+                    injustices that Black people 
+                    experience every day...
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left mb-4">
+                    <a class="level-item">
+                        <span class="icon is-small mr-3">
+                        <i class="fas fa-reply"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small mr-3">
+                        <i class="fas fa-retweet"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small">
+                        <i class="fas fa-heart"></i>
+                        </span>
+                    </a>
+                    </div>
+                </nav>
+                </div>
+            </article>
+            </div>
+        </div>
+        <div class='column'>
+            <div class="box">
+            <article class="media mt-4 py-2 px-4">
+                <div class="media-left">
+                <figure class="image is-128x128">
+                    <img class='is-rounded'
+                    src="https://user-images.githubusercontent.com/59466195/206879222-c280e8a6-b0d7-4508-bcdb-0f83ba73d956.jpg">
+                </figure>
+                </div>
+                <div class="media-content">
+                <div class="content has-text-left mb-5">
+                    <p>
+                    <strong>Ahmed Olawale</strong> 
+                    <br>
+                    The horrifying killings of 
+                    George Floyd, Ahmaud Arbery, 
+                    Breonna Taylor and far too 
+                    many other Black people—and 
+                    the protests they sparked—are
+                    shining a light on the brutal 
+                    injustices that Black people 
+                    experience every day...
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left mb-4">
+                    <a class="level-item">
+                        <span class="icon is-small mr-3">
+                        <i class="fas fa-reply"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small mr-3">
+                        <i class="fas fa-retweet"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small">
+                        <i class="fas fa-heart"></i>
+                        </span>
+                    </a>
+                    </div>
+                </nav>
+                </div>
+            </article>
+            </div>
+        </div>
+        </div>
+        
+        <div class="has-text-centered mb-6 mt-6">
+            <a href="{% url 'commulator:dashboard' %} "><button class="button is-link has-text-white">Back to Dashboard</button></a>
         </div>
     </div>
     {% endblock body %}
