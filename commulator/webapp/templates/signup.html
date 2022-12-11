@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="styles/signup.css"> -->
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css" />
     <title>{% block title %}SignUp{% endblock %}</title>
 </head>
 <body>
     {% block body %}
+    <nav>
+      <a class="btn" href="{% url 'commulator:dashboard' %}">
+        <button type="button">Back to dashboard</button>
+      </a>
+    </nav>
     <div class="container">
       <div class="wrapper">
         <div class="banner">
