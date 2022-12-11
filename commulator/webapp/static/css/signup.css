@@ -49,6 +49,10 @@ html {
     font-size: 2rem;
 }
 
+.bkg a {
+    text-decoration: none;
+}
+
 .bkg {
     width: 40%;
     height: 100%;

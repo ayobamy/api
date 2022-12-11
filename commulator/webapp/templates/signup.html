@@ -17,11 +17,6 @@
 </head>
 <body>
     {% block body %}
-    <nav>
-      <a class="btn" href="{% url 'commulator:dashboard' %}">
-        <button type="button">Back to dashboard</button>
-      </a>
-    </nav>
     <div class="container">
       <div class="wrapper">
         <div class="banner">
@@ -29,7 +24,7 @@
           <p>Start your journey <br/>with us today!</p>
         </div>
         <div class="bkg">
-          <button type="button">Sign Up</button>
+          <button type="button"><a href="{% url 'commulator:dashboard' %}">Back to Dashboard</a></button>
         </div>
         <form class="signup">
           <h1>Create Account</h1>
