@@ -44,3 +44,6 @@ def profile(request, pk):
 
 def team(request):
     return render(request, "team.html")
+
+def signup(request):
+    return render(request, "signup.html")

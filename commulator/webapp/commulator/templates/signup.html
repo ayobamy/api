@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles/signup.css"> -->
+    <title>{% block title %}SignUp{% endblock %}</title>
+</head>
+<body>
+    {% block body %}
+    <div class="container">
+      <div class="wrapper">
+        <div class="banner">
+          <h1>Welcome</h1>
+          <p>Start your journey <br/>with us today!</p>
+        </div>
+        <div class="bkg">
+          <button type="button">Sign Up</button>
+        </div>
+        <form class="signup">
+          <h1>Create Account</h1>
+          <div class="socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <p>or register with your email</p>
+          <!-- <div class="input-grp">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name">
+          </div> -->
+          <div class="input-grp">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="input-grp">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="input-grp">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Confirm Password" required>
+          </div>
+          <div class="btn">
+            <button type="button">Sign Up</button>
+            <button type="button" class="login">log in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    {% endblock body %}
+</body>
+</html>
