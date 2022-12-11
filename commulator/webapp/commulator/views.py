@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from .models import Profile, Post
 from .forms import PostForm
+from googletrans import Translator
+
 
 # Create your views here.
 from django.shortcuts import render, redirect
+
+translator = Translator(service_urls=[
+    'translate.google.com',
+    'translate.google.co.kr',
+])
 
 def dashboard(request):
     form = PostForm(request.POST or None)
@@ -14,7 +21,7 @@ def dashboard(request):
             post.user = request.user
             post.save()
             return redirect("commulator:dashboard")
-    
+            
     followed_posts = Post.objects.filter(
         user__profile__in=request.user.profile.follows.all()
     ).order_by("-created_at")
