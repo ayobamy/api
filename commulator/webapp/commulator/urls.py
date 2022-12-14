@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard, profile_list, profile, team, signup, translate
+from .views import dashboard, profile_list, profile, team, signup
 
 app_name = "commulator"
 
@@ -9,5 +9,4 @@ urlpatterns = [
     path("profile/<int:pk>", profile, name="profile"),
     path("team/", team, name="team"),
     path("signup/", signup, name="signup"),
-    path('translate/', translate, name='translate')
 ]

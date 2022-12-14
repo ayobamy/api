@@ -16,14 +16,6 @@ def dashboard(request):
     form = PostForm(request.POST or None)
     if request.method == "POST":
         form = PostForm(request.POST)
-        # lang = request.POST.get("lang", None)
-        # txt = request.POST.get("body", None)
-
-        # translator = Translator()
-        # tr = translator.translate(txt, dest=lang)
-
-        # return render(request, 'translate.html', {"result":tr.text})
-
         if form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
@@ -32,7 +24,7 @@ def dashboard(request):
             
     followed_posts = Post.objects.filter(
         user__profile__in=request.user.profile.follows.all()
-    ).order_by("-created_at")
+    ).order_by("created_at")
 
     return render(request, "commulator/dashboard.html", {"form": form, "posts": followed_posts},)
 
@@ -62,15 +54,3 @@ def team(request):
 
 def signup(request):
     return render(request, "signup.html")
-
-def translate(request):
-    if request.method == "POST":
-        lang = request.POST.get("lang", None)
-        txt = request.POST.get("txt", None)
-
-        translator = Translator()
-        tr = translator.translate(txt, dest=lang)
-
-        return render(request, 'translate.html', {"result":tr.text})
-
-    return render(request, 'translate.html')
