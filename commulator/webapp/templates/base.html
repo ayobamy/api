@@ -47,9 +47,14 @@
                 <a class="navbar-item" href="{% url 'commulator:team' %}">
                   Team
                 </a>
-                <a class="navbar-item" href="{% url 'commulator:dashboard' %}">
-                  Dashboard
-                </a>
+                <span class="navbar-item">
+                  <a class="button is-info is-inverted" href="{% url 'commulator:dashboard' %}">
+                    <span class="icon">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <span>Dashboard</span>
+                  </a>
+                </span>
                 <span class="navbar-item">
                   <a class="button is-info is-inverted" href="{% url 'commulator:signup' %}">
                     <span class="icon">
