@@ -10,7 +10,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'></script>
     <title>{% block title %}Commulator{% endblock %}</title>
     {% block stylesheet %}
-    <style>
+    <!-- <style>
             
         .center {
             display: flex;
@@ -18,7 +18,7 @@
             align-items: center;
         }
                     
-    </style>
+    </style> -->
     {% endblock %}
       
 </head>
@@ -46,25 +46,6 @@
         </div>
     </nav>
 
-    <!-- <div class="section pt-4 pb-0">
-        <nav class="breadcrumb has-arrow-separator">
-            <ul class="container">
-                <li><a class="has-text-grey">Commulator</a></li>
-                <li><a class="has-text-grey">Home</a></li>
-            </ul>
-        </nav>
-    </div> -->
-    <a href="{% url 'commulator:dashboard' %} ">
-    <section class="hero is-small has-background-info mb-4">
-        <div class="hero-body">
-        <div class="container">
-            <figure class="image center">
-                <img src="https://user-images.githubusercontent.com/59466195/206624151-57aad1fb-442b-491d-9bd2-e551a92b0459.png" style="max-width: 512px;">
-            </figure>
-        </div>
-        </div>
-    </section>
-    </a>
     <section class="section">
         <div class="container">
           <div class="columns">
@@ -80,10 +61,10 @@
               <h3 class="title is-3">Images</h3>
               <div class="columns">
                 <div class="column">
-                  <img src="screenshot1.png" alt="Screenshot 1">
+                  <img src="" alt="Screenshot 1">
                 </div>
                 <div class="column">
-                  <img src="screenshot2.png" alt="Screenshot 2">
+                  <img src="" alt="Screenshot 2">
                 </div>
               </div>
             </div>
@@ -91,28 +72,9 @@
         </div>
     </section>
 
-    <!-- <div class="container">
-        <div class="columns">
-
-            {% block content %}
-
-            {% endblock content %}
-
-        </div>
-    </div> -->
-
     <footer class="footer" style="background-color: rgb(5, 99, 207);">
         <div class="level">
-          <!-- <div class="level-item has-text-centered">
-            <p class="title is-5 has-text-white">FOLLOW US</p>
-            <p>
-              <a href="#"><i class="fab fa-twitter has-text-white"></i></a>
-              <a href="#"><i class="fab fa-facebook has-text-white"></i></a>
-              <a href="#"><i class="fab fa-instagram has-text-white"></i></a>
-            </p>
-          </div> -->
           <div class="level-item has-text-centered">
-            <!-- <p class="title is-5 has-text-white">Newsletter:</p> -->
             <form>
               <div class="field">
                 <h2 class="has-text-centered has-text-white">Newsletter</h2>
@@ -131,13 +93,6 @@
               </div>
             </form>
           </div>
-          <!-- <div class="level-item">
-            <p class="title is-5 has-text-white">Contact:<br/></p>
-            <p>
-              <a href="mailto:info@company.com" class="has-text-white">info@company.com</a><br>
-              <a href="tel:+2348152344126" class="has-text-white">+2348152344126</a><br>
-            </p>
-          </div> -->
         </div>
     </footer>
     

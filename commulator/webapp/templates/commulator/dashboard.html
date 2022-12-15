@@ -1,63 +1,102 @@
 {% extends 'base.html' %}
 
-{% block content %}
-
-
-<div class="column">
-    {% for post in posts %}
-    <div class="box">
-        {{post.body}}
-        <span class="is-small has-text-grey-light">
-            ({{ post.created_at }} by {{ post.user.username }}
-        </span>
-    </div>
-    {% endfor %}
-
-    {% for followed in user.profile.follows.all %}
-        {% for post in followed.user.posts.all %}
-            <div class="box">
-                {{post.body}}
-                <span class="is-small has-text-grey-light">
-                    ({{ post.created_at }} by {{ post.user.username }}
-                </span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'></script>
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    {% block stylesheet %}
+    <style>
+            
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+                    
+    </style>
+    {% endblock %}
+      
+</head>
+<body>
+    {% block body %}
+    <a href="{% url 'commulator:dashboard' %} ">
+        <section class="hero is-small has-background-info mb-4">
+            <div class="hero-body">
+            <div class="container">
+                <figure class="image center">
+                    <img src="https://user-images.githubusercontent.com/59466195/206624151-57aad1fb-442b-491d-9bd2-e551a92b0459.png" style="max-width: 512px;">
+                </figure>
             </div>
-        {% endfor %}
-    {% endfor %}
-</div>
-
-<div class="column is-one-third">
-
-    <div class="block">
-        <a href="{% url 'commulator:profile_list' %} ">
-            <button class="button is-dark is-outlined is-fullwidth">
-                All Profiles
-            </button>
-        </a>
-    </div>
-
-    <div class="block">
-        <a href="{% url 'commulator:profile' request.user.profile.id %} ">
-            <button class="button is-info is-light is-outlined is-fullwidth">
-                My Profile
-            </button>
-        </a>
-    </div>
-
-    <div class="block">
-        <div class="block">
-            <h2 class="title is-2">Add a Post</p>
+            </div>
+        </section>
+    </a>
+    <div class="container">
+        <div class="columns">
+            {% block content %}
+            <div class="column">
+                {% for post in posts %}
+                <div class="box">
+                    {{post.body}}
+                    <span class="is-small has-text-grey-light">
+                        ({{ post.created_at }} by {{ post.user.username }}
+                    </span>
+                </div>
+                {% endfor %}
+            
+                {% for followed in user.profile.follows.all %}
+                    {% for post in followed.user.posts.all %}
+                        <div class="box">
+                            {{post.body}}
+                            <span class="is-small has-text-grey-light">
+                                ({{ post.created_at }} by {{ post.user.username }}
+                            </span>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            
+            <div class="column is-one-third">
+            
+                <div class="block">
+                    <a href="{% url 'commulator:profile_list' %} ">
+                        <button class="button is-dark is-outlined is-fullwidth">
+                            All Profiles
+                        </button>
+                    </a>
+                </div>
+            
+                <div class="block">
+                    <a href="{% url 'commulator:profile' request.user.profile.id %} ">
+                        <button class="button is-info is-light is-outlined is-fullwidth">
+                            My Profile
+                        </button>
+                    </a>
+                </div>
+            
+                <div class="block">
+                    <div class="block">
+                        <h2 class="title is-2">Add a Post</p>
+                    </div>
+                    <div class="block">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="button is-info is-fullwidth is-medium mt-5"
+                                    type="submit">Post
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+            {% endblock content %}
         </div>
-        <div class="block">
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="button is-info is-fullwidth is-medium mt-5"
-                        type="submit">Post
-                </button>
-            </form>
-        </div>
     </div>
+    {% endblock body %}
+</body>
 
-</div>
-
-{% endblock content %}
