@@ -12,6 +12,9 @@ translator = Translator(service_urls=[
     'translate.google.co.kr',
 ])
 
+def base(request):
+    return render(request, "base.html")
+
 def dashboard(request):
     form = PostForm(request.POST or None)
     if request.method == "POST":
