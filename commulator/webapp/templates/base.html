@@ -22,9 +22,9 @@
 </head>
 <body>
     {% block body %}
-    <section class="hero is-info is-large is-fullheight">
+    <section class="hero is-large is-fullheight">
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar tabs">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
@@ -39,21 +39,21 @@
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
                 <span class="navbar-item">
-                  <a class="navbar-item" href="{% url 'commulator:base' %}">Home
+                  <a class="navbar-item has-text-white" href="{% url 'commulator:base' %}">Home
                   </a>
                 </span>
                 <span class="navbar-item">
-                  <a class="navbar-item" href="">
+                  <a class="navbar-item has-text-white" href="">
                     <span>About</span>
                   </a>
                 </span>
                 <span class="navbar-item">
-                  <a class="navbar-item" href="{% url 'commulator:team' %}">
+                  <a class="navbar-item has-text-white" href="{% url 'commulator:team' %}">
                   Team
                   </a>
                 </span>
                 <span class="navbar-item">
-                  <a class="navbar-item" href="{% url 'commulator:dashboard' %}">
+                  <a class="navbar-item has-text-white" href="{% url 'commulator:dashboard' %}">
                   Dashboard
                   </a>
                 </span>
