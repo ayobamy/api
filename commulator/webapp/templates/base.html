@@ -15,7 +15,17 @@
         .hero {
             background: black url('https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg') center / cover;
         }
-                    
+
+        @media (max-width: 1024px) {
+           .hero {
+            background: black url('https://user-images.githubusercontent.com/59466195/208042682-a85b05f8-2573-4158-948e-4bcbf9ddd2a8.png') center / cover;
+           }
+          }   
+        @media (max-width: 768px) {
+          .hero {
+          background: black url('https://user-images.githubusercontent.com/59466195/208042730-e2acc966-4a2c-47f9-b552-6cd127747a12.png') center / cover;
+          }
+        }      
     </style>
     {% endblock %}
       
@@ -24,7 +34,21 @@
     {% block body %}
     <section class="hero is-large is-fullheight">
       <div class="hero-head">
-
+        <div class="columns is-mobile is-marginless">
+          <div class="column">
+            
+          </div>
+          <div class="column">
+            <p class="navbar-item">Home</p>
+            <p class="navbar-item">About</p>
+            <p class="navbar-item">Team</p>
+            <p class="navbar-item">Dashboard</p>
+          </div>
+          <div class="column">
+            <p class="navbar-item">Sign up</p>
+          </div>
+        </div>
+      </div>
     </section>
 <!-- 
     <script>
