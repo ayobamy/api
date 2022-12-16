@@ -13,7 +13,7 @@
     <style>
             
         .hero {
-            background: url('https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg') center / cover;
+            background: black url('https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg') center / cover;
         }
                     
     </style>
@@ -24,60 +24,9 @@
     {% block body %}
     <section class="hero is-large is-fullheight">
       <div class="hero-head">
-        <nav class="navbar tabs">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-                <img src="{% static 'com-w.png' %}" alt="Logo">
-              </a>
-              <span id="burger" class="navbar-burger has-text-white" data-target="navbarMenuHeroB">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
-                  <a class="navbar-item has-text-white" href="{% url 'commulator:base' %}">Home
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="navbar-item has-text-white" href="">
-                    <span>About</span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="navbar-item has-text-white" href="{% url 'commulator:team' %}">
-                  Team
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="navbar-item has-text-white" href="{% url 'commulator:dashboard' %}">
-                  Dashboard
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="button is-info is-inverted" href="{% url 'commulator:signup' %}">
-                    <span class="icon">
-                      <i class="fas fa-user"></i>
-                    </span>
-                    <span>SignUp</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <!-- <img src="{% static 'people.jpg' %}" alt=""> -->
-        </div>
-      </div>
-    </section>
 
+    </section>
+<!-- 
     <script>
         const burgerIcon = document.querySelector('#burger');
         const navbarMenu = document.querySelector('#navbarMenuHeroB');
@@ -85,7 +34,7 @@
         burgerIcon.addEventListener('click', () => {
             navbarMenu.classList.toggle('is-active');
         });
-    </script>
+    </script> -->
     {% endblock body %}
 </body>
 </html>
