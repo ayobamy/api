@@ -37,23 +37,23 @@
         <nav class="navbar is-transparent">
           <div class="navbar-brand">
             <a class="navbar-item"
-               href="https://geeksforgeeks.org">
+               href="">
                 <img src=
     "{% static 'com-w.png' %}">
             </a>
        
-            <div class="navbar-burger"
-              data-target="navBackgroundDemo1">
+            <div id="burger" class="navbar-burger has-text-white"
+              data-target="navbarMenuHeroB">
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
        
-          <div id="navBackgroundDemo1"
+          <div id="navbarMenuHeroB"
             class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item has-text-white" href="#">
+              <a class="navbar-item has-text-white is-active" href="#">
                 Home
               </a>
               <a class="navbar-item has-text-white" href="#">
@@ -79,7 +79,7 @@
         </nav>
       </div>
     </section>
-<!-- 
+
     <script>
         const burgerIcon = document.querySelector('#burger');
         const navbarMenu = document.querySelector('#navbarMenuHeroB');
@@ -87,7 +87,7 @@
         burgerIcon.addEventListener('click', () => {
             navbarMenu.classList.toggle('is-active');
         });
-    </script> -->
+    </script>
     {% endblock body %}
 </body>
 </html>
