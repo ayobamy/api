@@ -34,20 +34,49 @@
     {% block body %}
     <section class="hero is-large is-fullheight">
       <div class="hero-head">
-        <div class="columns is-mobile is-marginless">
-          <div class="column">
-            
+        <nav class="navbar is-transparent">
+          <div class="navbar-brand">
+            <a class="navbar-item"
+               href="https://geeksforgeeks.org">
+                <img src=
+    "{% static 'com-w.png' %}">
+            </a>
+       
+            <div class="navbar-burger"
+              data-target="navBackgroundDemo1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          <div class="column">
-            <p class="navbar-item">Home</p>
-            <p class="navbar-item">About</p>
-            <p class="navbar-item">Team</p>
-            <p class="navbar-item">Dashboard</p>
+       
+          <div id="navBackgroundDemo1"
+            class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item has-text-white" href="#">
+                Home
+              </a>
+              <a class="navbar-item has-text-white" href="#">
+                About
+              </a>
+              <a class="navbar-item has-text-white" href="#">
+                Team
+              </a>
+              <a class="navbar-item has-text-white" href="#">
+                Dashboard
+              </a>
+              <div class="navbar-item">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <button class="button is-warning">
+                      Sign Up
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="column">
-            <p class="navbar-item">Signup</p>
-          </div>
-        </div>
+        </nav>
       </div>
     </section>
 <!-- 
