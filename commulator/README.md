@@ -21,3 +21,7 @@
 ![pexels-rahul-pandit-1457067](https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg)
 
 
+![phone-2](https://user-images.githubusercontent.com/59466195/208042682-a85b05f8-2573-4158-948e-4bcbf9ddd2a8.png)
+
+
+![phone-3](https://user-images.githubusercontent.com/59466195/208042730-e2acc966-4a2c-47f9-b552-6cd127747a12.png)
