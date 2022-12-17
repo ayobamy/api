@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 from .models import Profile, Post
 from .forms import PostForm
 from googletrans import Translator
+
 
 
 # Create your views here.
@@ -56,4 +58,12 @@ def team(request):
     return render(request, "team.html")
 
 def signup(request):
-    return render(request, "signup.html")
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # redirect to a new URL after saving the form
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
