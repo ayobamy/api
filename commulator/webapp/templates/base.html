@@ -76,6 +76,37 @@
             width: 100%;
         }
 
+        .hero-foot {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .hero-foot a {
+            color: #fff;
+        }
+
+        .hero-foot a:hover {
+            color: #ccc;
+        }
+
+        .hero-foot ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-foot li {
+            display: inline-block;
+        }
+
+        .hero-foot li a {
+          display: block;
+        }
+
+
+
 
     </style>
     {% endblock %}
@@ -129,6 +160,32 @@
             </div>
             <div class="column">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dui euismod, consectetur nisi ac, mollis ligula. Aenean ultricies malesuada odio, eget iaculis leo rutrum et. Ut mauris sem, dictum at dictum eget, ultrices eu massa. Fusce id felis sed lacus posuere interdum. Proin rhoncus mi quis auctor dictum. Aliquam erat volutpat. Duis fringilla, tellus ut imperdiet tristique, enim magna viverra ipsum, id aliquam lacus quam at lacus. Ut dignissim est sed nisi placerat volutpat. Fusce ac dignissim nunc. In hac habitasse platea dictumst. Donec condimentum enim ut lectus auctor, a faucibus eros ultricies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-3">
+              <h3 class="title is-5">Newsletter</h3>
+              <p>Newsletter:</p>
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input class="input" type="email" placeholder="Enter your email">
+                </div>
+                <div class="control">
+                  <button class="button is-primary">Sign up</button>
+                </div>
+              </div>
+            </div>
+            <div class="column is-3">
+              <h3 class="title is-5">Follow us</h3>
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              </ul>
             </div>
           </div>
         </div>
