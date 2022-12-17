@@ -82,12 +82,9 @@
             color:rgb(255, 255, 255);
         }
 
-        .footer .column a i .fab {
-            background-color: white;
-            color: #fff;
-            text-decoration: none;     
+        .fa-2x {
+            color: white;
         }
-
     </style>
     {% endblock %} 
 </head>
@@ -128,7 +125,19 @@
         <div class="container">
           <div class="columns">
             <div class="column">
-              <img src="https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg" alt="image">
+              <div class="slider is-auto-play is-fullheight is-rounded">
+                <div class="slider-wrap">
+                  <div class="slider-item">
+                    <img src="https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg" alt="Image 1">
+                  </div>
+                  <div class="slider-item">
+                    <img src="https://user-images.githubusercontent.com/59466195/207965723-4a668d75-3e81-4170-a4a6-e17b743afef2.jpg" alt="Image 2">
+                  </div>
+                  <div class="slider-item">
+                    <img src="https://user-images.githubusercontent.com/59466195/206669728-a91ed2f0-32c5-4ad1-bd0c-460f6cc3da1c.jpg" alt="Image 3">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="column">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dui euismod, consectetur nisi ac, mollis ligula. Aenean ultricies malesuada odio, eget iaculis leo rutrum et. Ut mauris sem, dictum at dictum eget, ultrices eu massa. Fusce id felis sed lacus posuere interdum. Proin rhoncus mi quis auctor dictum. Aliquam erat volutpat. Duis fringilla, tellus ut imperdiet tristique, enim magna viverra ipsum, id aliquam lacus quam at lacus. Ut dignissim est sed nisi placerat volutpat. Fusce ac dignissim nunc. In hac habitasse platea dictumst. Donec condimentum enim ut lectus auctor, a faucibus eros ultricies.</p>
@@ -156,9 +165,9 @@
       <div class="container">
         <div class="columns is-vcentered">
           <div class="column is-narrow">
-            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x" style="color: white;"></i></a>
             <a href="#"><i class="fab fa-twitter fa-2x" style="color: white;"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x" style="color: white;"></i></a>
           </div>
           <div class="column">
             <p>&copy; Copyright 2022</p>
