@@ -143,12 +143,12 @@
           <div id="navbarMenuHeroB" class="navbar-menu">
             <div class="navbar-end">
               <div class="navbar-item">
-                <a class="navbar-item" href="#">Home</a>
-                <a class="navbar-item" href="#">About</a>
-                <a class="navbar-item" href="#">Contact</a>
+                <a class="navbar-item" href="{% url 'commulator:base' %}">Home</a>
+                <a class="navbar-item" href="{% url 'commulator:team' %}">Team</a>
+                <a class="navbar-item" href="{% url 'commulator:dashboard' %}">Dashboard</a>
                 <div class="buttons">
-                  <a class="button is-danger" href="#">Log in</a>
-                  <a class="button is-warning" href="#">Sign up</a>
+                  <a class="button is-danger" href="{% url 'commulator:login' %}">Log in</a>
+                  <a class="button is-warning" href="{% url 'commulator:signup' %}">Sign up</a>
                 </div>
               </div>
             </div>
