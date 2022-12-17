@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 from .models import Profile, Post
 from .forms import PostForm
 from googletrans import Translator
@@ -67,3 +68,21 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            # redirect to a success page
+            return redirect('success')
+        else:
+            # return an error message
+            return render(request, 'login.html', {'error_message': 'Invalid login'})
+    else:
+        return render(request, 'login.html')
+
+# def success(request):
+#     return render(request,'success.html')
