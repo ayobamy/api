@@ -90,28 +90,39 @@
         }
 
         .hero-foot ul {
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          margin: 0;
+          padding: 0;
         }
 
         .hero-foot li {
-            display: inline-block;
+          display: inline-block;
+          padding: 10px;
+          margin: 5px;
         }
 
         .hero-foot li a {
-          display: block;
+          display: flex;
+          align-items: center;
         }
 
+        .hero-foot li a i {
+          padding: 5px;
+          margin: 10px;
+        }
 
-
+        .socials {
+          right: 0px;
+          display: flex;
+          align-items: center;
+        }
 
     </style>
-    {% endblock %}
-      
+    {% endblock %} 
 </head>
+
 <body>
     {% block body %}
     <section class="hero is-medium">
@@ -167,7 +178,7 @@
       <div class="hero-foot">
         <div class="container">
           <div class="columns">
-            <div class="column is-3">
+            <!-- <div class="column is-3">
               <h3 class="title is-5">Newsletter</h3>
               <p>Newsletter:</p>
               <div class="field has-addons">
@@ -178,13 +189,13 @@
                   <button class="button is-primary">Sign up</button>
                 </div>
               </div>
-            </div>
-            <div class="column is-3">
+            </div> -->
+            <div class="socials column is-3">
               <h3 class="title is-5">Follow us</h3>
               <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i>    Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>     Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>     Instagram</a></li>
               </ul>
             </div>
           </div>
