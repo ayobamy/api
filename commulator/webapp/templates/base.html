@@ -10,6 +10,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'></script>
     <title>{% block title %}Commulator{% endblock %}</title>
     {% block stylesheet %}
+
     <style>
         .hero {
           background-color: rgb(0, 0, 0);
@@ -51,33 +52,30 @@
             color: #fff;
         }
 
-        /* .navbar-start:hover {
-            background-color: #000;
-            font-weight: bold;
-            color: #000;
-        } */
-
         .navbar-item:hover {
             background-color: #000;
             color: #000;
         }
 
-
-            
-        /* .hero {
-            background: black url('https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg') center / cover;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 0px;
         }
 
-        @media (max-width: 1024px) {
-           .hero {
-            background: black url('https://user-images.githubusercontent.com/59466195/208042682-a85b05f8-2573-4158-948e-4bcbf9ddd2a8.png') center / cover;
-           }
-          }   
-        @media (max-width: 768px) {
-          .hero {
-          background: black url('https://user-images.githubusercontent.com/59466195/208042730-e2acc966-4a2c-47f9-b552-6cd127747a12.png') center / cover;
-          }
-        }       */
+        .columns {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+
+
     </style>
     {% endblock %}
       
@@ -99,26 +97,40 @@
             </a>
           </div>
         
-          <!-- <div id="navbarMenuHeroB" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="#">Home</a>
-              <a class="navbar-item" href="#">About</a>
-              <a class="navbar-item" href="#">Contact</a>
-            </div> -->
-        
+          <div id="navbarMenuHeroB" class="navbar-menu">
             <div class="navbar-end">
               <div class="navbar-item">
                 <a class="navbar-item" href="#">Home</a>
                 <a class="navbar-item" href="#">About</a>
                 <a class="navbar-item" href="#">Contact</a>
                 <div class="buttons">
-                  <a class="button is-primary" href="#">Sign up</a>
-                  <a class="button is-light" href="#">Log in</a>
+                  <a class="button is-danger" href="#">Log in</a>
+                  <a class="button is-warning" href="#">Sign up</a>
                 </div>
               </div>
             </div>
           </div>
         </nav>        
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <img src="https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg" alt="image">
+            </div>
+            <div class="column">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dui euismod, consectetur nisi ac, mollis ligula. Aenean ultricies malesuada odio, eget iaculis leo rutrum et. Ut mauris sem, dictum at dictum eget, ultrices eu massa. Fusce id felis sed lacus posuere interdum. Proin rhoncus mi quis auctor dictum. Aliquam erat volutpat. Duis fringilla, tellus ut imperdiet tristique, enim magna viverra ipsum, id aliquam lacus quam at lacus. Ut dignissim est sed nisi placerat volutpat. Fusce ac dignissim nunc. In hac habitasse platea dictumst. Donec condimentum enim ut lectus auctor, a faucibus eros ultricies.</p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <img src="https://user-images.githubusercontent.com/59466195/207965767-3e6c3813-ce46-4a15-8a91-141587898ecb.jpg" alt="image">
+            </div>
+            <div class="column">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dui euismod, consectetur nisi ac, mollis ligula. Aenean ultricies malesuada odio, eget iaculis leo rutrum et. Ut mauris sem, dictum at dictum eget, ultrices eu massa. Fusce id felis sed lacus posuere interdum. Proin rhoncus mi quis auctor dictum. Aliquam erat volutpat. Duis fringilla, tellus ut imperdiet tristique, enim magna viverra ipsum, id aliquam lacus quam at lacus. Ut dignissim est sed nisi placerat volutpat. Fusce ac dignissim nunc. In hac habitasse platea dictumst. Donec condimentum enim ut lectus auctor, a faucibus eros ultricies.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
